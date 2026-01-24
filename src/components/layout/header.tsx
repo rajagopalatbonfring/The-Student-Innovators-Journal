@@ -248,9 +248,9 @@ const mainNavLinks = [
   { href: '/participate', label: 'Participate', icon: Award },
   { href: '/submissions', label: 'Categories', icon: Layers },
   { href: '/student-research-explorers', label: 'Explorers', icon: Search },
-  { href: '/experiment-to-article', label: 'Articles', icon: FileText },
+  { href: '/experiment-to-article', label: 'Experiment to Articles', icon: FileText },
   { href: '/contact', label: 'Contact', icon: MessageSquare },
-  { href: '/newsletter', label: 'Newsletter', icon: Newspaper },
+  // { href: '/newsletter', label: 'Newsletter', icon: Newspaper },
 ];
 
 export function Header() {
