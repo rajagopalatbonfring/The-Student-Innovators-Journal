@@ -29,7 +29,7 @@ const submissionFormats = [
 export default function SubmissionsPage() {
     return (
       <div className="bg-background">
-        <div className="w-full pt-16 pb-20 sm:pt-24 sm:pb-28 bg-gradient-to-br from-primary to-accent">
+        <div className="w-full pt-16 pb-20 sm:pt-24 sm:pb-28 bg-primary">
             <div className="container mx-auto px-8 text-center">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-5xl md:text-7xl font-extrabold text-primary-foreground leading-tight font-heading drop-shadow-[0_4px_2px_rgba(0,0,0,0.2)]">

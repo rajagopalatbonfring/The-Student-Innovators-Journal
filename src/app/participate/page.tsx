@@ -50,7 +50,7 @@
 // export default function ParticipatePage() {
 //     return (
 //       <div className="bg-background">
-//          <div className="w-full pt-16 pb-20 sm:pt-24 sm:pb-28 bg-gradient-to-br from-primary to-accent">
+//          <div className="w-full pt-16 pb-20 sm:pt-24 sm:pb-28 bg-primary">
 //             <div className="container mx-auto px-8 text-center">
 //                 <div className="max-w-4xl mx-auto">
 //                     <h1 className="text-5xl md:text-7xl font-extrabold text-primary-foreground leading-tight font-heading drop-shadow-[0_4px_2px_rgba(0,0,0,0.2)]">
@@ -191,7 +191,7 @@ export default function ParticipatePage() {
     return (
       <div className="bg-background">
         {/* Hero Section */}
-        <div className="relative w-full pt-20 pb-24 sm:pt-28 sm:pb-32 bg-gradient-to-br from-primary to-accent overflow-hidden">
+        <div className="relative w-full pt-20 pb-24 sm:pt-28 sm:pb-32 bg-primary overflow-hidden">
           <div className="container mx-auto px-8 text-center relative z-10">
             <div className="max-w-4xl mx-auto">
               
