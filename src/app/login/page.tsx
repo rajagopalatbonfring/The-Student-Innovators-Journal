@@ -35,32 +35,35 @@ export default function LoginPage() {
             </div>
         </div>
 
-        <div className="container mx-auto px-8 py-20">
-            <div className="max-w-md mx-auto">
-                <Card className="p-8 md:p-12">
-                    <h2 className="text-3xl font-bold font-heading text-foreground mb-8 text-center">Log In to Your Account</h2>
-                    <form className="space-y-6">
-                        <div className="space-y-2">
-                            <Label htmlFor="email">Email Address</Label>
-                            <Input id="email" type="email" placeholder="inventor@awesome.com" defaultValue={dummyUser.email} />
-                        </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="password">Password</Label>
-                            <Input id="password" type="password" defaultValue="password123" />
-                        </div>
-                        <div className="text-center pt-4">
-                            <Button onClick={handleLogin} size="lg" className="w-full">
-                                <Rocket className="mr-2"/>
-                                Launch In!
-                            </Button>
-                        </div>
-                        <p className="text-center text-sm text-muted-foreground pt-4">
-                            New here? <Link href="/signup" className="font-semibold text-primary hover:underline">Join the fun!</Link>
-                        </p>
-                    </form>
-                </Card>
+        <section className="relative">
+            <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'radial-gradient(circle, hsl(var(--foreground)) 2px, transparent 2px)', backgroundSize: '40px 40px'}}></div>
+            <div className="relative z-10 container mx-auto px-8 py-20">
+                <div className="max-w-md mx-auto">
+                    <Card className="p-8 md:p-12">
+                        <h2 className="text-3xl font-bold font-heading text-foreground mb-8 text-center">Log In to Your Account</h2>
+                        <form className="space-y-6">
+                            <div className="space-y-2">
+                                <Label htmlFor="email">Email Address</Label>
+                                <Input id="email" type="email" placeholder="inventor@awesome.com" defaultValue={dummyUser.email} />
+                            </div>
+                            <div className="space-y-2">
+                                <Label htmlFor="password">Password</Label>
+                                <Input id="password" type="password" defaultValue="password123" />
+                            </div>
+                            <div className="text-center pt-4">
+                                <Button onClick={handleLogin} size="lg" className="w-full">
+                                    <Rocket className="mr-2"/>
+                                    Launch In!
+                                </Button>
+                            </div>
+                            <p className="text-center text-sm text-muted-foreground pt-4">
+                                New here? <Link href="/signup" className="font-semibold text-primary hover:underline">Join the fun!</Link>
+                            </p>
+                        </form>
+                    </Card>
+                </div>
             </div>
-        </div>
+        </section>
       </div>
     );
 }

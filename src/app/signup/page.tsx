@@ -33,50 +33,52 @@ export default function SignupPage() {
                 </div>
             </div>
         </div>
+        <section className="relative">
+            <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'radial-gradient(circle, hsl(var(--foreground)) 2px, transparent 2px)', backgroundSize: '40px 40px'}}></div>
+            <div className="relative z-10 container mx-auto px-8 py-20">
+                <div className="max-w-md mx-auto">
+                    <Card className="p-8 md:p-12">
+                        <div className="text-center mb-8">
+                            <h2 className="text-3xl font-bold font-heading text-foreground">Create Your Account</h2>
+                        </div>
+                        <form className="space-y-6">
+                            <div className="space-y-2">
+                                <Label htmlFor="name">Full Name</Label>
+                                <Input id="name" type="text" placeholder="Alex Doe" />
+                            </div>
+                            <div className="space-y-2">
+                                <Label htmlFor="email">Email Address</Label>
+                                <Input id="email" type="email" placeholder="alex@example.com" />
+                            </div>
+                            <div className="space-y-2">
+                                <Label htmlFor="password">Password</Label>
+                                <Input id="password" type="password" />
+                            </div>
+                            <div className="space-y-2">
+                                <Label htmlFor="confirm-password">Confirm Password</Label>
+                                <Input id="confirm-password" type="password" />
+                            </div>
 
-      <div className="container mx-auto px-8 py-20">
-        <div className="max-w-md mx-auto">
-            <Card className="p-8 md:p-12">
-                <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold font-heading text-foreground">Create Your Account</h2>
+                            <div className="flex items-center space-x-2 pt-2">
+                                <Checkbox id="terms" />
+                                <Label htmlFor="terms" className="text-sm text-muted-foreground">
+                                    I agree to the <Link href="#" className="underline text-primary">Terms of Service</Link>
+                                </Label>
+                            </div>
+                        
+                            <div className="text-center pt-4">
+                            <Button onClick={handleSignup} size="lg" className="w-full">
+                                    Sign Up & Start Creating
+                                </Button>
+                            </div>
+                            <p className="text-center text-sm text-muted-foreground pt-4">
+                                Already have an account? <Link href="/login" className="font-semibold text-primary hover:underline">Log in</Link>
+                            </p>
+                        </form>
+                    </Card>
                 </div>
-                <form className="space-y-6">
-                    <div className="space-y-2">
-                        <Label htmlFor="name">Full Name</Label>
-                        <Input id="name" type="text" placeholder="Alex Doe" />
-                    </div>
-                     <div className="space-y-2">
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" type="email" placeholder="alex@example.com" />
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="password">Password</Label>
-                        <Input id="password" type="password" />
-                    </div>
-                     <div className="space-y-2">
-                        <Label htmlFor="confirm-password">Confirm Password</Label>
-                        <Input id="confirm-password" type="password" />
-                    </div>
-
-                    <div className="flex items-center space-x-2 pt-2">
-                        <Checkbox id="terms" />
-                        <Label htmlFor="terms" className="text-sm text-muted-foreground">
-                            I agree to the <Link href="#" className="underline text-primary">Terms of Service</Link>
-                        </Label>
-                    </div>
-                   
-                    <div className="text-center pt-4">
-                       <Button onClick={handleSignup} size="lg" className="w-full">
-                            Sign Up & Start Creating
-                        </Button>
-                    </div>
-                     <p className="text-center text-sm text-muted-foreground pt-4">
-                        Already have an account? <Link href="/login" className="font-semibold text-primary hover:underline">Log in</Link>
-                    </p>
-                </form>
-            </Card>
-        </div>
-      </div>
+            </div>
+        </section>
     </div>
   );
 }
