@@ -1,0 +1,95 @@
+{
+  "placeholderImages": [
+    {
+      "src": "https://picsum.photos/seed/doodle-main/600/500",
+      "alt": "A doodle-style illustration of a child looking through a telescope",
+      "width": 600,
+      "height": 500,
+      "hint": "doodle science"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-team/600/450",
+      "alt": "An illustration of a diverse group of kids collaborating on a project",
+      "width": 600,
+      "height": 450,
+      "hint": "doodle team"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-eco/500/350",
+      "alt": "A sketchy drawing of a wind turbine and a smiling sun",
+      "width": 500,
+      "height": 350,
+      "hint": "eco doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-space/400/200",
+      "alt": "A cartoon rocket ship flying past planets",
+      "width": 400,
+      "height": 200,
+      "hint": "space doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-dna/400/200",
+      "alt": "A simple sketch of a DNA helix",
+      "width": 400,
+      "height": 200,
+      "hint": "life science doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-robot/400/200",
+      "alt": "A quirky, hand-drawn robot character",
+      "width": 400,
+      "height": 200,
+      "hint": "robot doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-math/400/200",
+      "alt": "Floating numbers and geometric shapes in a doodle style",
+      "width": 400,
+      "height": 200,
+      "hint": "math doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-bot-2/400/300",
+      "alt": "Sketch of a child building a small robot",
+      "width": 400,
+      "height": 300,
+      "hint": "kid with robot doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-glass/400/300",
+      "alt": "A simple drawing of a magnifying glass over a flower",
+      "width": 400,
+      "height": 300,
+      "hint": "magnifying glass doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-code/400/300",
+      "alt": "A cartoon brain with computer code flowing out of it",
+      "width": 400,
+      "height": 300,
+      "hint": "coding doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-fractal/400/300",
+      "alt": "A simple, symmetrical line-art pattern",
+      "width": 400,
+      "height": 300,
+      "hint": "pattern doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-experiment/400/300",
+      "alt": "A cartoon drawing of a bubbling science beaker",
+      "width": 400,
+      "height": 300,
+      "hint": "experiment doodle"
+    },
+    {
+      "src": "https://picsum.photos/seed/doodle-build/400/300",
+      "alt": "A sketch of a child with a hammer and blocks",
+      "width": 400,
+      "height": 300,
+      "hint": "building doodle"
+    }
+  ]
+}
