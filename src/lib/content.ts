@@ -1,13 +1,13 @@
 import { Microscope, Cpu, FlaskConical, Calculator, Rocket, BookOpen, Award, FileText } from 'lucide-react';
 
-export const categories = [
-  'All Categories',
-  'Mini Scientists',
-  'Young Innovators',
-  'Junior Engineers',
-  'Math Wizards',
-  'Research Explorers'
-];
+// export const categories = [
+//   'All Categories',
+//   'Mini Scientists',
+//   'Young Innovators',
+//   'Junior Engineers',
+//   'Math Wizards',
+//   'Research Explorers'
+// ];
 
 export const creativePrompts = [
   {
@@ -41,6 +41,10 @@ export const creativePrompts = [
     hint: 'mathematics'
   },
 ];
+
+
+
+
 
 export const submissionCategories = [
     {
@@ -84,6 +88,58 @@ export const submissionCategories = [
         ]
     }
 ];
+
+// ── New: Activity → Category mapping
+export const activityToCategoryMap: Record<string, typeof submissionCategories[number]['title']> = {
+  // High-confidence direct matches
+  'Math Puzzles':          'Math Wizards',
+  'Master Mind':           'Math Wizards',
+  'Abacus Presentation':   'Math Wizards',     // math technique focus
+  'Life science':          'Mini Scientists',
+  'Planet science':        'Mini Scientists',
+  'Human Body':            'Mini Scientists',
+  'Robotics':              'Junior Engineers',
+  'Gaming & Innovations':  'Young Innovators',
+
+  // Slightly broader / context-dependent (good defaults)
+  'Idea Creation':         'Young Innovators',   // invention & tech ideas
+  'Projects':              'Junior Engineers',   // maker/DIY default
+  'Story Writing':         'Mini Scientists',    // experiment narrative / observation story
+};
+
+// Optional helper function (recommended for form / display logic)
+export function getCategoryForActivity(activity: string): typeof submissionCategories[number]['title'] | null {
+  const normalized = activity.trim();
+  return activityToCategoryMap[normalized] || null;
+}
+
+// Optional: reverse lookup → get all activities that belong to one category
+export function getActivitiesForCategory(categoryTitle: string): string[] {
+  return Object.entries(activityToCategoryMap)
+    .filter(([, cat]) => cat === categoryTitle)
+    .map(([act]) => act);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const participationContent = {
     researchExplorers: {
