@@ -1,14 +1,6 @@
-import { Microscope, Cpu, FlaskConical, Calculator, Rocket, BookOpen, Award, FileText } from 'lucide-react';
+import { Microscope, Cpu, FlaskConical, Calculator, Beaker, Lightbulb } from 'lucide-react';
 
-// export const categories = [
-//   'All Categories',
-//   'Mini Scientists',
-//   'Young Innovators',
-//   'Junior Engineers',
-//   'Math Wizards',
-//   'Research Explorers'
-// ];
-
+// Themes - Prompts for creative submissions
 export const creativePrompts = [
   {
     tag: 'Eco-Innovations',
@@ -45,7 +37,8 @@ export const creativePrompts = [
 
 
 
-
+// Categories and their functions
+// Submission Categories
 export const submissionCategories = [
     {
         title: 'Mini Scientists',
@@ -89,7 +82,7 @@ export const submissionCategories = [
     }
 ];
 
-// ── New: Activity → Category mapping
+// Activity type → Category mapping
 export const activityToCategoryMap: Record<string, typeof submissionCategories[number]['title']> = {
   // High-confidence direct matches
   'Math Puzzles':          'Math Wizards',
@@ -107,13 +100,13 @@ export const activityToCategoryMap: Record<string, typeof submissionCategories[n
   'Story Writing':         'Mini Scientists',    // experiment narrative / observation story
 };
 
-// Optional helper function (recommended for form / display logic)
+// helper function (For form / display logic)
 export function getCategoryForActivity(activity: string): typeof submissionCategories[number]['title'] | null {
   const normalized = activity.trim();
   return activityToCategoryMap[normalized] || null;
 }
 
-// Optional: reverse lookup → get all activities that belong to one category
+// Reverse lookup → get all activity type that belong to one category
 export function getActivitiesForCategory(categoryTitle: string): string[] {
   return Object.entries(activityToCategoryMap)
     .filter(([, cat]) => cat === categoryTitle)
@@ -122,77 +115,58 @@ export function getActivitiesForCategory(categoryTitle: string): string[] {
 
 
 
+// ... (all your existing exports remain unchanged)
+
+// ── NEW: Special / Rotating Activities for Experiment-to-Article page
+// These change periodically (e.g., monthly or quarterly)
+export const specialActivities = [
+  {
+    title: "Kitchen Chemistry Challenge",
+    description: "Use only items from your kitchen to create a safe chemical reaction and write about what happened!",
+    icon: Beaker,
+    hint: "kitchen science",
+    suggestedCategory: "Mini Scientists",
+  },
+  {
+    title: "Shadow Puppet Science Story",
+    description: "Make shadow puppets to explain a science concept (light, animals, space) and turn it into a short story article.",
+    icon: Lightbulb,
+    hint: "shadow puppet",
+    suggestedCategory: "Mini Scientists",
+  },
+  {
+    title: "Invent a Math Game",
+    description: "Create your own board game or card game that teaches a math concept — then write an article explaining how to play and what math it teaches.",
+    icon: Calculator,
+    hint: "math game",
+    suggestedCategory: "Math Wizards",
+  },
+  {
+    title: "Recycled Robot Rescue Mission",
+    description: "Build a small robot or rescue vehicle from trash/recyclables and write an article about how it works and why recycling matters.",
+    icon: Cpu,
+    hint: "recycled robot",
+    suggestedCategory: "Junior Engineers",
+  },
+  {
+    title: "Future Gadget Diary",
+    description: "Imagine a gadget that solves a problem in 2050 — draw it, describe how it works, and write a short article as if you're using it every day.",
+    icon: Cpu,
+    hint: "future gadget",
+    suggestedCategory: "Young Innovators",
+  },
+] as const;
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export const participationContent = {
-    researchExplorers: {
-        icon: Rocket,
-        title: 'Student Research Explorers',
-        description: 'In this new section, students take a real-world scientific or engineering concept and turn it into something they can explain, explore, or replicate.',
-        formats: [
-            'Illustrated or written research conversion',
-            'Mini-model photos or poster explanations',
-            'Video presentation or oral storytelling'
-        ]
-    },
-    experimentToArticle: {
-        icon: FileText,
-        title: 'Experiment to Article',
-        description: 'Turn your science experience into a mini-article.',
-        details: [
-            'A short write-up about a science experiment or activity',
-            'What you observed, learned, or discovered',
-            'Include photos or drawings of your model or setup'
-        ]
-    },
-    recognition: {
-        icon: Award,
-        title: 'Recognition and Participation',
-        description: 'Each valid submission will receive:',
-        benefits: [
-            'E-Certificate of Participation',
-            'A chance to be featured in the journal (online or print)',
-            'A featured e-book of all kindness stories'
-        ]
-    },
-    newsletter: {
-        icon: BookOpen,
-        title: 'Monthly STEM Spark Newsletter',
-        description: 'Top recognitions will be announced in our newsletter:',
-        awards: [
-            'STEM Star of the Month',
-            'Bright Builder',
-            'Innovation Champion',
-            'Math Mastermind',
-            'Young Research Explorer'
-        ]
-    }
-}
-
+// Archives Data with volumes and articles including special activities & special issues(themes or prompts)
 const volumesData = {
   'Mini Scientists': { icon: Microscope },
   'Young Innovators': { icon: Cpu },
   'Junior Engineers': { icon: FlaskConical },
   'Math Wizards': { icon: Calculator },
 };
-
 
 export const journalYears = [
   {
@@ -201,13 +175,21 @@ export const journalYears = [
       {
         issue: 3,
         date: 'Fall 2024',
-        title: 'Math Fun Zone',
+        title: '',
         coverHint: 'math doodle',
         volumes: [
           {
             title: 'Math Wizards',
             icon: volumesData['Math Wizards'].icon,
             articles: [
+              {
+                title: "Special Activity: Invent a Math Game",
+                author: "Riya, Age 11",
+                slug: "invent-a-math-game-special",
+                imageHint: "math game doodle",
+                content: "<p>I created a board game called 'Fraction Frenzy' using cardboard and markers. Players roll dice to move around the board and solve fraction problems to collect ingredients for a magic potion. I wrote the rules and made a game board sketch. The best part was testing it with my friends — everyone loved it! This special activity helped me understand fractions in a super fun way.</p>",
+                tags: ["special-activity", "Math Wizards"]  // optional: can filter or highlight later
+              },
               {
                 title: 'The Art of Tessellation',
                 author: 'Chloe, Age 14',
@@ -236,7 +218,7 @@ export const journalYears = [
       {
         issue: 2,
         date: 'Summer 2024',
-        title: 'The Space Explorers Issue',
+        title: '',
         coverHint: 'space doodle',
         volumes: [
             {
@@ -290,7 +272,7 @@ export const journalYears = [
        {
         issue: 1,
         date: 'Spring 2024',
-        title: 'The Green Innovations Issue',
+        title: '',
         coverHint: 'eco doodle',
         volumes: [
              {
@@ -373,34 +355,121 @@ export const journalYears = [
   }
 ].sort((a, b) => b.year - a.year);
 
+
+
+
+// Default dummy user
 export const dummyUser = {
   name: "Alex Doe",
   email: "alex.doe@example.com",
 };
 
-export const dummySubmissions = [
-  {
-    title: "Recycled Plastic Rover",
-    category: "Junior Engineers",
-    date: "2024-03-15",
-    status: "Published",
-  },
-  {
-    title: "A Sudoku Solving Strategy",
-    category: "Math Wizards",
-    date: "2024-09-01",
-    status: "Published",
-  },
-  {
-    title: "My Newest Invention: The Homework Machine",
-    category: "Young Innovators",
-    date: "2024-10-05",
-    status: "Under Review",
-  },
-  {
-    title: "How Do Plants Breathe?",
-    category: "Mini Scientists",
-    date: "2024-10-21",
-    status: "Needs Revision",
-  },
-];
+
+
+
+
+
+
+
+
+
+
+
+// export const categories = [
+//   'All Categories',
+//   'Mini Scientists',
+//   'Young Innovators',
+//   'Junior Engineers',
+//   'Math Wizards',
+//   'Research Explorers'
+// ];
+
+
+
+
+
+
+
+
+
+// export const participationContent = {
+//     researchExplorers: {
+//         icon: Rocket,
+//         title: 'Student Research Explorers',
+//         description: 'In this new section, students take a real-world scientific or engineering concept and turn it into something they can explain, explore, or replicate.',
+//         formats: [
+//             'Illustrated or written research conversion',
+//             'Mini-model photos or poster explanations',
+//             'Video presentation or oral storytelling'
+//         ]
+//     },
+//     experimentToArticle: {
+//         icon: FileText,
+//         title: 'Experiment to Article',
+//         description: 'Turn your science experience into a mini-article.',
+//         details: [
+//             'A short write-up about a science experiment or activity',
+//             'What you observed, learned, or discovered',
+//             'Include photos or drawings of your model or setup'
+//         ]
+//     },
+//     recognition: {
+//         icon: Award,
+//         title: 'Recognition and Participation',
+//         description: 'Each valid submission will receive:',
+//         benefits: [
+//             'E-Certificate of Participation',
+//             'A chance to be featured in the journal (online or print)',
+//             'A featured e-book of all kindness stories'
+//         ]
+//     },
+//     newsletter: {
+//         icon: BookOpen,
+//         title: 'Monthly STEM Spark Newsletter',
+//         description: 'Top recognitions will be announced in our newsletter:',
+//         awards: [
+//             'STEM Star of the Month',
+//             'Bright Builder',
+//             'Innovation Champion',
+//             'Math Mastermind',
+//             'Young Research Explorer'
+//         ]
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+// export const dummySubmissions = [
+//   {
+//     title: "Recycled Plastic Rover",
+//     category: "Junior Engineers",
+//     date: "2024-03-15",
+//     status: "Published",
+//   },
+//   {
+//     title: "A Sudoku Solving Strategy",
+//     category: "Math Wizards",
+//     date: "2024-09-01",
+//     status: "Published",
+//   },
+//   {
+//     title: "My Newest Invention: The Homework Machine",
+//     category: "Young Innovators",
+//     date: "2024-10-05",
+//     status: "Under Review",
+//   },
+//   {
+//     title: "How Do Plants Breathe?",
+//     category: "Mini Scientists",
+//     date: "2024-10-21",
+//     status: "Needs Revision",
+//   },
+// ];

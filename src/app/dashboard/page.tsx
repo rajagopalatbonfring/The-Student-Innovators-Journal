@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { dummyUser, dummySubmissions } from "@/lib/content";
+// import { dummyUser, dummySubmissions } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Rocket } from "lucide-react";
@@ -21,7 +21,7 @@ export default function DashboardPage() {
                 <div className="container mx-auto px-8 text-center">
                     <div className="max-w-4xl mx-auto">
                         <h1 className="text-5xl md:text-7xl font-extrabold text-primary-foreground leading-tight font-heading drop-shadow-[0_4px_2px_rgba(0,0,0,0.2)]">
-                            Welcome Back, {dummyUser.name.split(' ')[0]}!
+                            {/* Welcome Back, {dummyUser.name.split(' ')[0]}! */}
                         </h1>
                         <p className="mt-6 text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
                            Your Innovator Dashboard — Check your projects, grab certificates, and see your STEM stars shine!
@@ -54,7 +54,7 @@ export default function DashboardPage() {
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody>
-                                    {dummySubmissions.length > 0 ? (
+                                    {/* {dummySubmissions.length > 0 ? (
                                         dummySubmissions.map((submission) => (
                                             <TableRow key={submission.title} className="border-border">
                                                 <TableCell className="font-medium text-foreground">{submission.title}</TableCell>
@@ -79,7 +79,7 @@ export default function DashboardPage() {
                                                 </div>
                                             </TableCell>
                                         </TableRow>
-                                    )}
+                                    )} */}
                                 </TableBody>
                             </Table>
                         </CardContent>
