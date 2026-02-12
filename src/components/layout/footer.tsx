@@ -177,9 +177,11 @@ export function Footer() {
                 </div>
             </div>
         </div>
-        <div className="bg-card/50 border-t-2 border-foreground">
+        <div className="bg-card/20 border-t-2 border-foreground">
             <div className="container mx-auto px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p className="text-center sm:text-left text-sm text-muted-foreground">&copy; {new Date().getFullYear()} The Student Innovators Journal. All Rights Reserved.</p>
+                
+                
                 <div className="flex gap-x-6 gap-y-2">
                     {legalLinks.map(link => (
                          <Link key={link.text} href={link.href} className="text-sm text-muted-foreground hover:text-primary font-semibold transition-colors hover:underline">
@@ -187,6 +189,14 @@ export function Footer() {
                         </Link>
                     ))}
                 </div>
+                
+                <div className='flex justify-center items-center gap-4'>
+                    <h1 className="text-xl text-gray-700 font-heading">Published by</h1>
+                    <a href="https://iihhschool.org">
+                    <img src="https://iihhschool.org/iihh-frontend/assets/images/IIHH_dash-logo-ClXvDo4q.jpg" width={140} className='rounded-full' alt="IIHH-School" />
+                    </a>
+                </div>
+
             </div>
         </div>
     </footer>
