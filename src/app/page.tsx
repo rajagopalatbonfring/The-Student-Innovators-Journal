@@ -91,10 +91,7 @@
 
 'use client';
 
-
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import WelcomeModal from '@/components/welcome-modal';
 import { Card, CardTitle, CardDescription, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Rocket, PenTool, Lightbulb, ArrowRight, Sparkles, Zap, Star, Heart } from 'lucide-react';
@@ -107,24 +104,8 @@ const heroImage = placeholderImages.find(p => p.hint.includes('doodle science'))
 
 export default function Home() {
 
-  const [showModal, setShowModal] = useState(false);
-
-  useEffect(() => {
-    // Show only if not seen before
-    const hasSeen = localStorage.getItem('tsijWelcomeSeen');
-    if (!hasSeen) {
-      setShowModal(true);
-    }
-  }, []);
-
-  const handleClose = () => {
-    localStorage.setItem('tsijWelcomeSeen', 'true');
-    setShowModal(false);
-  };
-
   return (
     <>
-      {showModal && <WelcomeModal onClose={handleClose} />}
 
       {/* Hero Section with Enhanced Doodle Style */}
       <section className="relative w-full pt-20 pb-24 sm:pt-28 sm:pb-32 bg-primary overflow-hidden">
